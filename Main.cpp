@@ -12,8 +12,13 @@
 const std::string kYourName = "TODO: Replace this string with your name.";
 
 /* Change these constants to contain the paths out of your mazes. */
-const std::string kPathOutOfNormalMaze = "TODO: Replace this string with your path out of the normal maze.";
-const std::string kPathOutOfTwistyMaze = "TODO: Replace this string with your path out of the twisty maze.";
+
+// Assuming you have not yet modified the string kYourName, the two sequences you want are
+
+// Path out of labyrinth:        SESSWENNENSESS
+// Path out of twisty labyrinth: ESWEESWENE
+const std::string kPathOutOfNormalMaze = "SESSWENNENSESS";
+const std::string kPathOutOfTwistyMaze = "ESWEESWENE";
 
 int main() {
     /* Generate the maze.
@@ -24,9 +29,20 @@ int main() {
     MazeCell* startLocation = mazeFor(kYourName);
     
     /* Set a breakpoint here to explore your maze! */
-    if (isPathToFreedom(startLocation, kPathOutOfNormalMaze)) {
+    if (isPathToFreedom(startLocation, kPathOutOfNormalMaze)) 
+    {
         std::cout << "Congratulations! You've found a way out of your labyrinth." << std::endl;
-    } else {
+    } 
+    else 
+    {
+        std::cout << "Sorry, but you're still stuck in your labyrinth." << std::endl;
+    }
+
+    if (isPathToFreedom(startLocation, kPathOutOfNormalMaze)) 
+    {
+        std::cout << "Congratulations! You've found a way out of your labyrinth." << std::endl;
+    } 
+    else {
         std::cout << "Sorry, but you're still stuck in your labyrinth." << std::endl;
     }
     
