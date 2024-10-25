@@ -9,7 +9,7 @@
  * do NOT edit the value of kYourName. Changing kYourName will change which
  * maze you get back, which might invalidate all your hard work!
  */
-const std::string kYourName = "TODO: Replace this string with your name.";
+const std::string kYourName = "saurabh manoj";
 
 /* Change these constants to contain the paths out of your mazes. */
 
@@ -17,8 +17,8 @@ const std::string kYourName = "TODO: Replace this string with your name.";
 
 // Path out of labyrinth:        SESSWENNENSESS
 // Path out of twisty labyrinth: ESWEESWENE
-const std::string kPathOutOfNormalMaze = "SESSWENNENSESS";
-const std::string kPathOutOfTwistyMaze = "ESWEESWENE";
+const std::string kPathOutOfNormalMaze = "SESWSEEEWWWNENESEWNENWW";
+const std::string kPathOutOfTwistyMaze = "NNESNNSSEENSSS";
 
 int main() {
     /* Generate the maze.
@@ -37,16 +37,7 @@ int main() {
     {
         std::cout << "Sorry, but you're still stuck in your labyrinth." << std::endl;
     }
-
-    if (isPathToFreedom(startLocation, kPathOutOfNormalMaze)) 
-    {
-        std::cout << "Congratulations! You've found a way out of your labyrinth." << std::endl;
-    } 
-    else {
-        std::cout << "Sorry, but you're still stuck in your labyrinth." << std::endl;
-    }
-    
-    
+        
     /* Generate the twisty maze.
      *
      * Note: Don't set a breakpoint on this line. Otherwise, you'll see twistyStartLocation before
